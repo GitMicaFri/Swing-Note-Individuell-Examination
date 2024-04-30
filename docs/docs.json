@@ -1,0 +1,51 @@
+{
+    "info": {
+        "description": "API for Swing-Notes-API",
+        "title": "Swing Notes API",
+        "version": "1.0.0"
+    },
+    "components": {
+        "shemas": {
+            "note": {
+                "type": "object",
+                "properties":  {
+                    "notes": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+        "api/notes": {
+            "get": {
+                "description": null,
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "shema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "type":"boolean"
+                                        },
+                                        "notes": {
+                                           "type": "array",
+                                           "items": {
+                                                "$ref": "#/components/schemas/notes"
+                                           }
+                                        }
+
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Returnerar API för swingnotes"
+                    }
+                },
+                "summary": "Returnerar API för swingnotes"
+            }
+        }
+    }
+}
