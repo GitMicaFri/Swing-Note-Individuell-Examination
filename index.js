@@ -8,8 +8,8 @@ app.use(express.json()) // Interprets what comes in to JSON.
 const userRoute = require('./MVC/Routes/userRoutes')
 const notesRoute = require('./MVC/Routes/notesRoutes')
 
-app.use('/users', userRoute)
-app.use('/notes', notesRoute)
+app.use('/api/users', userRoute)
+app.use('/api/notes', notesRoute)
 
 
 // POST method route  -save data
@@ -21,7 +21,6 @@ app.post('/api/notes', (req, res) => {
     // spara datan
   res.send('POST request to the homepage')
 })
-
 
 
 // ska ligga sist i filen

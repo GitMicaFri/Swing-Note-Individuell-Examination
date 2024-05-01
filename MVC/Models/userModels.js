@@ -32,7 +32,15 @@ class UserCollection {
             username: "username",
             password: "encryptedPassword"
         }
-        
+        return new Promise((resolve, reject) => {
+            DB.insert(user, (err, newDoc) => {
+                if(err){
+                    reject(err)
+                } else {
+                    resolve(newDoc)
+                }
+            })
+        })
     }
 }
 
