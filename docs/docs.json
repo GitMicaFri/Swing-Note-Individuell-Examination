@@ -31,10 +31,8 @@
                                             "type":"boolean"
                                         },
                                         "notes": {
-                                           "type": "array",
-                                           "items": {
-                                                "$ref": "#/components/schemas/notes"
-                                           }
+                                           "type": "array"
+                                           
                                         }
 
                                     }
