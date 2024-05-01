@@ -5,10 +5,10 @@ const router = express.Router()
 router.get('/',(req, res) => {
     res.send('GET request for note')
 })
-
-router.post('/',(req, res) => {
-    res.send('POST request with note')
-})
+// Interfearar med POST requesten i index-filen.
+// router.post('/',(req, res) => {
+//     res.send('POST request with note')
+// })
 
 
 router.put('/',(req, res) => {

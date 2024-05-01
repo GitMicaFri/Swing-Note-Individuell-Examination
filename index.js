@@ -3,14 +3,13 @@ require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT || 3000
 
+app.use(express.json()) // Interprets what comes in to JSON.
+
 const userRoute = require('./MVC/Routes/userRoutes')
 const notesRoute = require('./MVC/Routes/notesRoutes')
 
 app.use('/users', userRoute)
 app.use('/notes', notesRoute)
-
-app.use(express.json()) // Interprets what comes in to JSON.
-
 
 
 // POST method route  -save data
