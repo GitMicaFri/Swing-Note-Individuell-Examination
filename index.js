@@ -3,8 +3,8 @@ require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT || 3000
 
-const userRoute = require('./MVC/Routes/users')
-const notesRoute = require('./MVC/Routes/notes')
+const userRoute = require('./MVC/Routes/userRoutes')
+const notesRoute = require('./MVC/Routes/notesRoutes')
 
 app.use('/users', userRoute)
 app.use('/notes', notesRoute)
