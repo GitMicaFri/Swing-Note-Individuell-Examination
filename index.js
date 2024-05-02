@@ -16,7 +16,7 @@ app.use('/api/notes', notesRoute)
 app.post('/api/notes', (req, res) => {
     // 2 endpoints(api, notes.js)
     // få ut data från requesten
-    const note = req.body.note
+    const note = req.body.note // Hämtar bodyn från postman
     console.log(note)
     // spara datan
   res.send('POST request to the homepage')

@@ -1,0 +1,11 @@
+{"type":"user","username":"Mickan","password":"$2b$10$zHGwuAYlem76hdFDol9RIuWxycDrMTT8Pop6qbnK4iaVPQlBCPYBe","_id":"39PpbIK0vpdKXptp"}
+{"type":"user","username":"Tintin","password":"$2b$10$Zv3LPpuPhbONL0OHkj6HXuVCybxIYm2ITFva5TjmQuxtrejfinMwu","_id":"GahvJpSH5mW6beFj"}
+{"type":"user","username":"Samuel","password":"$2b$10$IQwzN7k8NH0h4LBvK6gjyuYsqAGhp68e0J35bYbhQfAboLqPlPLQm","_id":"MwbruUxypxBhCiuY"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714634669385},"modifiedAt":{"$$date":1714634669385},"_id":"NHCGyg8vTItosQjG"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714634880730},"modifiedAt":{"$$date":1714634880730},"_id":"ZEi931WRcESr72Qw"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714634990864},"modifiedAt":{"$$date":1714634990864},"_id":"nMzDOxIBf4uZXMp6"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714634974014},"modifiedAt":{"$$date":1714634974014},"_id":"rds0XQJFNzyvrzjh"}
+{"type":"user","username":"Jolle","password":"$2b$10$x8kXx3d/rfYtJ5XYbL57bOtXyL72xCqb53090BJPbWqkYpjM/YEtq","_id":"s1TtngqC8IRt82Mn"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714635111598},"modifiedAt":{"$$date":1714635111598},"_id":"wWJkKLXEyqAGUvse"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714634773390},"modifiedAt":{"$$date":1714634773390},"_id":"wwVFmEFu6aMusk5r"}
+{"type":"note","title":"Anteckning 1","text":"Hejsvejs","createdAt":{"$$date":1714635124877},"modifiedAt":{"$$date":1714635124877},"_id":"fdIbJ9AtCjuOW5YH"}

@@ -1,22 +1,20 @@
 const express = require('express')
 const router = express.Router()
+const notesController = require('../Controllers/notesController')
+
+router.post('/', notesController.createNote)
+
+// router.get('/',(req, res) => {
+//     res.send('GET request for note')
 
 
-router.get('/',(req, res) => {
-    res.send('GET request for note')
-})
-// Interfearar med POST requesten i index-filen.
-// router.post('/',(req, res) => {
-//     res.send('POST request with note')
+
+// router.put('/',(req, res) => {
+//     res.send('PUT request to update note')
 // })
 
+// router.delete('/',(req, res) => {
+//     res.send('DELETE request to delete note')
+// })
 
-router.put('/',(req, res) => {
-    res.send('PUT request to update note')
-})
-
-router.delete('/',(req, res) => {
-    res.send('DELETE request to delete note')
-})
-
-module.exports = router;
+module.exports = router
