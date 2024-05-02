@@ -1,3 +1,6 @@
+const UserCollection = require('../Models/userModels')
+
+
 
 exports.registerUser = async(req, res) => {
     try {

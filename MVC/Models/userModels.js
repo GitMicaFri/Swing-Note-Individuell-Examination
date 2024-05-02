@@ -1,4 +1,4 @@
-const DB = require('../database')
+const DB = require('../../database')
 const bcrypt = require('bcrypt')
 
 class UserCollection {
@@ -29,8 +29,8 @@ class UserCollection {
         const encryptedPassword = await bcrypt.hash(password, 10)
         const user = {
             type: "user",
-            username: "username",
-            password: "encryptedPassword"
+            username: username,
+            password: encryptedPassword
         }
         return new Promise((resolve, reject) => {
             DB.insert(user, (err, newDoc) => {
