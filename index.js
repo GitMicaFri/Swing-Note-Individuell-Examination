@@ -1,18 +1,45 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
-const app = express()
+const swaggerUi = require('swagger-ui-express');
+const swaggerJSON = require('./swagger.json');
+const swaggerJSDoc = require('swagger-jsdoc')
+
+const userRoute = require('./MVC/Routes/userRoutes')
+const notesRoute = require('./MVC/Routes/notesRoutes')
+
 const PORT = process.env.PORT || 3000
+const app = express()
+
+const swaggerOptions = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'My API',
+      version: '1.0.0',
+      description: 'A sample API for learning Swagger',
+    },
+    servers: [
+      {
+        url: 'http://localhost:3000',
+      },
+    ],
+  },
+  apis: ['./routes/*.js'],
+};
+
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
 app.use(express.json()) // Middleware som tar hand om (parsing) json
 app.use(cookieParser());
 
-const userRoute = require('./MVC/Routes/userRoutes')
-const notesRoute = require('./MVC/Routes/notesRoutes')
 
 app.use('/api/users', userRoute)
 app.use('/api/notes', notesRoute)
+
+
 
 
 // POST method route  -spara data
