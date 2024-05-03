@@ -8,7 +8,7 @@ router.get('/byId/:id',(req, res) => { // Routen hanterar GET requests till spec
     res.json(user) // Returnerar user i json-format
 })
 
-router.post('/signup', userController.registerUser) // Routern hanterar POST requests för reg. av ny användare, genom att köra registerUser-metoden från userController
+router.post('/signup', userController.registerNewUser) // Routern hanterar POST requests för reg. av ny användare, genom att köra registerUser-metoden från userController
 
 router.post('/login', userController.login) // Routern hanterar login för användare som ovan
 

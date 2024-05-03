@@ -2,6 +2,7 @@ const DB = require('../../database')
 const bcrypt = require('bcrypt')
 
 class UserCollection {
+
     static async findUserByUsername(username) {
         return new Promise((resolve, reject) => {
             DB.findOne({ type: 'user', username: username }, (err, doc) => {                 
@@ -43,8 +44,5 @@ class UserCollection {
         })
     }
 }
-
-
-
 
 module.exports = UserCollection

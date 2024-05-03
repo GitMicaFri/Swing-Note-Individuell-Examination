@@ -1,20 +1,16 @@
-const express = require('express')
-const router = express.Router()
-const notesController = require('../Controllers/notesController')
-
-router.post('/', notesController.createNote)
-
-// router.get('/',(req, res) => {
-//     res.send('GET request for note')
+const express = require('express')  // Importerar expressJS
+const router = express.Router() // Skapar nytt router-objekt
+const notesController = require('../Controllers/notesController') // Importerar notesController från angiven path
 
 
+router.post('/', notesController.createNote) // Router för post request till notesController, skapa anteckning
 
-// router.put('/',(req, res) => {
-//     res.send('PUT request to update note')
-// })
+router.get('/', notesController.getAllNotes) // Router för get request till notesController, hämta alla anteckningar
 
-// router.delete('/',(req, res) => {
-//     res.send('DELETE request to delete note')
-// })
+router.put('/:id', notesController.updateNote) // Router för put request till notesController, till specifikt id att uppdatera
 
-module.exports = router
+router.delete('/:id', notesController.deleteNote) // Router för put request till notesController, till specifikt id att radera
+
+
+
+module.exports = router // Exporterar routerobjektet så att det kan användas på annan plats
