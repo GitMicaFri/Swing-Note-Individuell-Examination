@@ -4,10 +4,13 @@ const UserCollection = require('../Models/userModels')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
+const TOKEN_SECRET = 'alksghaddajsgfpajsdiogj'
+
 
 exports.registerNewUser = async(req, res) => {
     try {
         const {username, password} = req.body
+        console.log(username)
         const user = await UserCollection.
         findUserByUsername(username)
         if(user) {
@@ -23,6 +26,7 @@ exports.registerNewUser = async(req, res) => {
             }
         })
     } catch(err) {
+        console.error(err)
 res.status(500).send({message:'Internal server error'})
     }
 }
@@ -38,6 +42,12 @@ exports.login = async(req, res) => {
         if(!matchedPassword) {
             return res.status(404).send({error: 'No such password!'})
         }
+
+        // Skapa json signature token
+        const token = jwt.sign({username: username}, TOKEN_SECRET)
+
+        // Returnera det i en cookie
+        res.cookie('user',token, { maxAge: 900000, httpOnly: true })
         res.status(200).send({message:'Login successful!'})
     } catch(err) {
         res.status(500).send({message: 'Internal server error'})

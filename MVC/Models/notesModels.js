@@ -1,9 +1,9 @@
-// Hanterar allt som händer med datan i databasen
+// Hanterar allt som händer med data som rör anteckningar i databasen
 
 const DB = require('../../database')
 
 class NotesCollection {
-    
+
     static createNote(noteInfo) {
         return new Promise((resolve, reject) => {
             const note = {
@@ -35,7 +35,7 @@ class NotesCollection {
                 if (err) {
                     reject(err)
                 } else {
-                    resolve({ _id: id, ...updates });
+                    resolve({ _id: id, ...updates }); // kopierar innehållet i objektet och gör ett nytt objekt
                 }
             })
         })
